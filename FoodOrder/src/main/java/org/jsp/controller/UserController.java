@@ -16,10 +16,8 @@ public static void main(String[] args) {
 	System.out.println("1. save the user");	
 	System.out.println("2. update the user");	
 	System.out.println("3. save the foodOrder");	
-	System.out.println("4. update the foodOrder");	
-	System.out.println("5. get foodOrder by the user name");
-	System.out.println("6. get foodOrder by the user id");	
-	System.out.println("7.. delete foodOrder");	
+	System.out.println("4. update the foodOrder");		
+	System.out.println("7. delete foodOrder");	
 	System.out.println("enter your choice");
 	int choice=sc.nextInt();
 switch (choice) {
