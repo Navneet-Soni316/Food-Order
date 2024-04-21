@@ -46,7 +46,6 @@ public List<FoodOrder> getFoodOrderByUid(int UserId) {
 	Users u=manager.find(Users.class, UserId);
 	if(u!=null) {
 		String qry="select f From FoodOrder f  where f.u.id=?1" ;
-//				"select u.f From Users u  where u.id=?1";
 		Query q=manager.createQuery(qry);
 		q.setParameter(1, UserId);
 		return q.getResultList();
@@ -60,22 +59,8 @@ public List<FoodOrder> getFoodOrderByUserEmailANdPassword(String email, String p
 	q.setParameter(1, email);
 	q.setParameter(2, password);
 	return q.getResultList();
-		
 }
-//public void deleteFoodOrder(int fid) {
-//	Query q=manager.createQuery("select f from FoodOrder f where f.id=?1");
-//	q.setParameter(1, fid);
-//    FoodOrder food=(FoodOrder) q.getSingleResult();
-//    if(food!=null) {
-//    	food.setU(null);
-//    	manager.remove(food);
-//    	EntityTransaction t=manager.getTransaction();
-//    	t.begin();
-//    	t.commit();
-//    }
-//    
-//	return;
-//}
+
 public void deleteOrder(FoodOrder order,int fid)
 {
   FoodOrder fo=manager.find(FoodOrder.class, fid);

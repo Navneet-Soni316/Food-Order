@@ -17,9 +17,7 @@ public static void main(String[] args) {
 	System.out.println("2. update the user");	
 	System.out.println("3. save the foodOrder");	
 	System.out.println("4. update the foodOrder");	
-	System.out.println("5. get foodOrder by the user name");
-	System.out.println("6. get foodOrder by the user id");	
-	System.out.println("7.. delete foodOrder");	
+	System.out.println("5. delete foodOrder");	
 	System.out.println("enter your choice");
 	int choice=sc.nextInt();
 switch (choice) {
@@ -90,9 +88,7 @@ public static void saveFoodOrder() {
 		f.setDel_Time(LocalDate.parse("3003-12-04"));
 		fddao.saveFoodOrder(f, uid);
 		System.out.println("the order savesd with id "+f.getId());
-		
 	}
-	
 }
 public static void updateFoodOrder() {
 	FoodOrder f=new FoodOrder();
@@ -108,7 +104,6 @@ public static void updateFoodOrder() {
 			String name=sc.next();
 			String address=sc.next();
 			double price=sc.nextDouble();
-			
 			f.setAddress(address);
 			f.setItemName(name);
 			f.setPrice(price);
@@ -117,8 +112,6 @@ public static void updateFoodOrder() {
 			fddao.updateFoodOrder(f, uid);
 			System.out.println("the order savesd with id "+f.getId());
 		}
-		
-		
 	}
 }
 public static void deleteFoodItem() {
@@ -134,8 +127,5 @@ public static void deleteFoodItem() {
     {
       System.err.println("Invalid Order_Id !!!!! ");
     }
-    
-	
-	
 }
 }
